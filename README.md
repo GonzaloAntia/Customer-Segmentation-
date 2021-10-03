@@ -862,5 +862,3 @@ Costo de Envio en Clusters
 
 Accepts pre orden en Clusters
 
- 
-![image](https://user-images.githubusercontent.com/69318200/135735187-33826cf7-ebd2-43c9-9d1d-3881f62ebf21.png)
