@@ -1,27 +1,6 @@
 # Customer-Segmentation-
 
-	                                                                           
- 
-
-
-
- 
-
-DIPLOMA EN ESPECIALIZACIÓN ANALÍTICA DE NEGOCIOS
-CASO 1 – PEDIDOSYA 
-
-
-
-
-
-
-
-
-
-
-Gonzalo Antía 
-
-
+	                                                                        
 
 
 RESUMEN EJECUTIVO 
@@ -38,52 +17,6 @@ A grandes rasgos se analiza:
 
 Para ello, se realiza:
 Una segmentación de los clientes entendiendo como era el negocio de dichos partners no solo utilizando el NPS sino información de su operativa y performance comercial para finalmente ofrecer recomendaciones a la alta dirección de PedidosYa en cuanto a que acciones tomar para la vertical markets.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-INDICE
-Breve descripción de la compañía ………………………………………………………………………………………. 4
-
-Introducción ………………………………………………….……………………………  ……. 5
-
-Riesgo de la implementación de la estrategia……………….…………...………………………………………………..6
-
-Hipótesis……………………………………………………………………….…..…7
-	
-Análisis Exploratorio de Datos…………………………..…..………………………………………….…..….7
-
-Preparación de los Datos..	..………………………….……………………………………….……….…11
-
-Modelado……………………………………………………………………….….. 16
-	
-Evaluación y Conclusiones………………….………………………………………….…………27
-
-Partner Target………………………………………………………………………28
-
-ANEXOS…./……………………………………………………………………….33
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -213,6 +146,7 @@ Análisis multivariado:
 A continuación se presenta un diagrama de correlación que muestra la relacion de las variables numéricas en la base recibida por la empresa sin hacer modificaciones de ningún tipo. 
 Sería la información de aquellos partners que no tienen valores faltantes en la base (aprox 25% de la base total) y sin hacer cálculos de ratios ni la transformación de las variables de encuestas. Este análisis permite visualizar una tendencia preliminar de correlaciones y a la vez, notar la notoria presencia de valores faltantes en la base.
 Diágrama de correlaciones previo a transformaciones numéricas y sin hacer imputaciones de N/A:
+  
  
 A grandes rasgos, se concluye que hay variables muy correlacionadas entre si que pueden afectar la creación de los clústers como qty_picts y qty_products y la cantidad de encuestas relacionadas con el NPS.  También se observa que las variables cuantitativas estan correlacionadas positivamente con la variable ordenes emitidas, lo cual tiene sentido, ya que ha mayor cantidad de ordenes emitidas, mayor seran los triggers, sesiones, chats, rechazos y vouchers. 
 Es importante a la hora de segmentar y clusterizar grupos, tomar acciones analíticas ante aquellas variables que esten muy correlacionadas entre sí.  Se buscaran variables que sean diferentes entre sí, incorrelacionadas,  que aporten al momento de la segmentación para la creación de los clusters. Luego en la interpretación de los mismos, se incluirán para caracterizar los grupos y evaluar relaciones. 
@@ -248,20 +182,37 @@ Se llevó a cabo una segmentación en los siguientes niveles:
 En las siguientes tablas, se presentan datos comparativos de frecuencias en variables cualitativas y de valores de medianas en variables cuantitativas, para comparar resultados en dos grupos bien diferenciados de partners. “Rechazos Análisis” es una base de 110 partners que presentan ratios de rechazos por orden superiores a 2,5% mientras que “Rechazos Rest” sería el resto de la base con valores inferiores a dicho ratio.  Para que los resultados sean más representativos, se decidió acotar el análisis a aquellos partners que tengan más de 45 días de antigüedad en sus operaciones.
 
 Tabla comparativa en Variables Operativas – Enfoque Rechazos
-ANALISIS RECHAZOS
-110 Partners	          1512 Partners
-Rechazos Análisis       Rechazos Rest
-  Variables Operativas	
-  % Triggers por orden	3,96%	0,29%
-	% Chats por orden	0%	0,12%
-	% NPS Positivo	7,27%	3,90%
-	% NPS Negativo	3,63%	3,90%
-	% Sesiones por orden	1,01%	0,70%
-	Accepts_pre_order = TRUE	82,70%	55,68%
-	Response_time	2,78	1,922
-	Delivery_time : Entre 15 y 30	19%	15,54%
-	Actual_delivery_time	15,13	15
-	capacity_check=TRUE	0,90%	16,53%
+
+ANALISIS RECHAZOS en Variables Operativas
+         
+Grupo Rechazos Análisis   
+110 Partners	 
+% Triggers por orden	       3,96%	
+% Chats por orden	        0%	
+% NPS Positivo	               7,27%	
+% NPS Negativo	               3,63%	
+% Sesiones por orden	       1,01%	
+Accepts_pre_order=TRUE         82,70%	
+Response_time	               2,78	
+Delivery_time:Entre 15 y 30     19%	
+Actual_delivery_time	       15,13	
+capacity_check=TRUE	       0,90%	
+
+
+Grupo Rechazos Rest
+1512 Partners	
+% Triggers por orden		0,29%
+% Chats por orden	        0,12%
+% NPS Positivo		        3,90%
+% NPS Negativo		        3,90%
+% Sesiones por orden		0,70%
+Accepts_pre_order = TRUE	55,68%
+Response_time            	1,922
+Delivery_time : Entre 15 y 30	15,54%
+Actual_delivery_time		15
+capacity_check=TRUE             16,53%
+
+
 
 A nivel operativo, se puede concluir que la variable que tiene  más peso a la hora de los rechazos de ordenes son los triggers. Esta conclusión también se verifica en el diágrama de correlación en donde se puede visualizar correlación positiva entre las variables. 
 Asimismo, se deduce que aquellos partners con mayor cantidad de rechazos, también son aquellos que no tienen límite de capacidad establecida.  Esto puede explicar gran parte de los rechazos de ordenes que deben hacer, al no tener un sistema de gestión y de previsión ante una posible escasez de productos.  
@@ -276,20 +227,35 @@ A diferencia de lo que si puede suceder en otras verticales de la empresa, como 
 “Locales que presentan la funcionalidad de limite de capacidad tienen menos rechazos en sus ordenes frente a aquellos que no la tienen”
 Como se observa en las tablas comparativas, el grupo de patnerns con alto ratio de rechazos por orden practicamente no presenta la funcionalidad de límite de capacidad. No tenemos información sobre las causas de los rechazos, no sabemos en definitiva si se deben a cuasas asociadas a limitantes y/o mala gestión de capacidad,  pero el análisis exploratorio es determinante y nos indica que a mayor es la probabilidad de tener la funcionalidad de capacidad, menor va a ser el ratio de rechazos por orden. 
 
-Tabla comparativa en Variables Comerciales – Enfoque Rechazos 
-ANALISIS RECHAZOS	110 Partners	1512 Partners
-	Rechazos Análisis	Rechazos Rest
-Variable
-Comercial
 
-	% Voucher por orden	4%	2,50%
-	accepts_voucher = TRUE	82,70%	91,13%
-	Has_Custom_Photo=TRUE 	0%	3,04%
-	is_gold_vip = TRUE	0,90%	2,24%
-	qty_products	48	117,5
-	has_online_payment = TRUE	3,63%	95,30%
-	Shipping amount = TRUE	77%	68,58%
-	has_mov = TRUE	72,70%	75,72%
+
+Tabla comparativa en Variables Comerciales – Enfoque Rechazos 
+
+ANALISIS RECHAZOS en Variables Comerciales
+
+Rechazos Análisis
+110 Partners
+% Voucher por orden	         4%	
+accepts_voucher = TRUE	        82,70%	
+Has_Custom_Photo=TRUE 	         0%	
+is_gold_vip = TRUE	        0,90%	
+qty_products	                 48	
+has_online_payment = TRUE	3,63%	
+Shipping amount = TRUE  	 77%	
+has_mov = TRUE	               72,70%	
+
+
+Rechazos Rest
+1512 Partners
+% Voucher por orden	        2,50%
+accepts_voucher = TRUE	        91,13%
+Has_Custom_Photo=TRUE 	        3,04%
+is_gold_vip = TRUE	        2,24%
+qty_products		        117,5
+has_online_payment = TRUE	95,30%
+Shipping amount = TRUE	        68,58%
+has_mov = TRUE		        75,72%
+
 
 
 A nivel comercial, se nota la gran barrera para el desarrollo que es la imposibilidad de ofrecer pago online. También se visualiza una gran diferencia en los productos cargados en catálogo, lo cual da muestras clara que una escasez de variabilidad en la oferta genera falta de atracción en el consumidor final.
@@ -297,11 +263,24 @@ A nivel comercial, se nota la gran barrera para el desarrollo que es la imposibi
 
 
 Tabla comparativa en Volúmen y antigüedad en días – Enfoque Rechazos 
-ANALISIS RECHAZOS	110 Partners	1512 Partners
-	Rechazos Análisis	Rechazos Rest
-Volumen y antiguedad	Ordenes por mes	12,73	342,42
-	Antiguedad en días	167,5	192,5
+
+		
+Rechazos Análisis	
+110 Partners
+Ordenes por mes	        12,73	
+Antiguedad en días	167,5	
+	
+	
+Rechazos Rest
+1512 Partners
+Ordenes por mes		342,42
+Antiguedad en días	192,5
+	
+	
+	
 Aquí se concluye que los partners que tienen resultados operativas malos y que deben rechazar ordenes, tienden a tener una gran diferencia de ordenes emitidas frente a aquellos que operativamente son mejores.  Esto muestra que un alto ratio de rechazos en ordenes, atenta directamente contra el crecimiento y desarrollo de negocio del partner. 
+
+
 Con respecto al análisis de la base en general (se adjuntan en anexo), se pueden detallar las siguientes conclusiones sobre los partners:
 -	En su gran mayoría tienen logística a través de PedidosYa
 -	Es habitual que tenga un monto mínimo de compra
@@ -311,7 +290,10 @@ Con respecto al análisis de la base en general (se adjuntan en anexo), se puede
 -	En gran medida se cobra el envío
 -	Delivery time es mayormente entre 30 y 45 minutos 
 -	Los partners reciben en un 58% NPS positivo, 38% neutral y remanente 4% negativo
--	
+
+
+
+
 MODELADO
 
 Se tomo la base y se realizaron los siguientes procedimientos para evaluar qué modelo llevar adelante
@@ -332,36 +314,36 @@ Otras variables fueron descartadas a nivel funcional:
 -	NPS – Gracias al análisis exploratorio, verificamos que no parece ser una variable de peso a la hora de segmentar. 
 -	Días de antigüedad: decidimos que los clusters se determinen por ratios operativos, y que la variable de antigüedad se utilice para la interpretación de los grupos. 
 
-Variable	Tipo	Descripción
-Delivery_time	Factor	Rango de tiempo prometido de entrega
-Shipping_amount	Factor	Booleana - Si tiene costo de envío
-Has_mov	Factor	Booleana - Si tiene valor mínimo de compra
-Ordenes por mes	Numérica	Cantidad de ordenes promedio por mes por partner.
-Response_time	Numérica	Tiempo promedio de respuesta
-Accepts_pre_order	Factor	Booleana - Si acepta Pre-ordenes
-Capacity_check	Factor	Funcionalidad de limite de capacidad.
-Qty_products	Numérica	Cantidad de productos cargados en histórico por partner.
-% Rechazos	Numérica	Porcentaje de rechazos por orden en el periodo de ventana de estudio.
-% Triggers	Numérica	Porcentaje de triggers por orden en el periodo de ventana de estudio.
-% Voucher_order	Numérica	Porcentaje de voucher por orden en el periodo de ventana de estudio.
-% Sesiones	Numérica	Porcentaje de sesiones por orden en el periodo de ventana de estudio.
-% Chats	Numérica	Porcentaje de chats por orden en el periodo de ventana de estudio.
 Variables que fueron descartadas por su distribución estadistica: 
 -	actual_delivery_time fue descartada por tener distribución uniforme, no tiene estructura para clusterizar.
 
 
-Pre – Selección de variables para la segmentación
+
+
+
+Pre – Selección de variables para la segmentación (Estas son las variables elegidas para la segmentación)
+
+Variable	    Tipo	   Descripción
+Delivery_time	    Factor	   Rango de tiempo prometido de entrega
+Shipping_amount	    Factor	   Booleana - Si tiene costo de envío
+Has_mov	            Factor	   Booleana - Si tiene valor mínimo de compra
+Ordenes por mes	    Numérica       Cantidad de ordenes promedio por mes por partner.
+Response_time	    Numérica       Tiempo promedio de respuesta
+Accepts_pre_order   Factor	   Booleana - Si acepta Pre-ordenes
+Capacity_check	    Factor	   Funcionalidad de limite de capacidad.
+Qty_products	    Numérica       Cantidad de productos cargados en histórico por partner.
+% Rechazos	    Numérica       Porcentaje de rechazos por orden en el periodo de ventana de estudio.
+% Triggers	    Numérica       Porcentaje de triggers por orden en el periodo de ventana de estudio.
+% Voucher_order	    Numérica       Porcentaje de voucher por orden en el periodo de ventana de estudio.
+% Sesiones	    Numérica       Porcentaje de sesiones por orden en el periodo de ventana de estudio.
+% Chats	            Numérica       Porcentaje de chats por orden en el periodo de ventana de estudio.
+
+
 
 
 
 Como se puede visualizar en la gráfica, se logró una preselección de variables mixtas que pueden determinar el tipo de algoritmo a usar. 
 Algunos algoritmos no soportan variables cualitativas pues se basan en calcular distancias. Para ello, se deberia crear una matriz de distancia en las observaciones. 	
-
-
-
-
-
-
 
 
 
@@ -372,6 +354,8 @@ A priori se pensó en dos algoritmos que podrían representar de forma eficiente
 
 -	KMEANS
 -	KMEDOIDS
+
+
 
 
 KMEANS: 
@@ -394,25 +378,12 @@ Tampoco queda muy definida la cantidad óptima de clusters, que puede estar entr
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 Métrica Silueta para Kmeans:
 
- 
-
+El indice promedio de Silueta no supera el 0.25.  (ver gráficas en archivo R)
 
 Como los indices promedio de Silueta no eran muy alentadores, se decide probar con Kmedoids que a diferencia de Kmeans, es un algoritmo que si acepta variables de data mixta y es robusto a outliers. 
+
 
 KMEDOIDS:
 
@@ -432,7 +403,8 @@ Para la utilización de este algoritmo, se llevaron acciones similares que en km
 
 Métrica Silueta para Kmedoids:
 
- 
+
+El indice promedio de Silueta alcanza el 0.5.  (ver gráficas en archivo R)
 
 Como se puede visualizar en la gráfica, el indicador Silueta en Kmedoids es bastante superior al de kmeans. 
 He aquí una de las razones por las cuales se optó por el algoritmo de kmedoids. 
@@ -442,10 +414,10 @@ El coeficiente de Silueta es una métrica que representa que tan bien agrupados 
 Realizado el análisis de clúster óptimos, el algoritmo recomendó realizar 6 clústers, pero se tomó una decisión estratégica (dado que entre 4 y 6 no había prácticamente diferencias), de optar por presentar 4 clusters con una silueta general de 0,43 siendo un buen indicador con clusters con volúmenes de datos. 
 
 
- 
+
 
 En la representación gráfica ya se pueden diferenciar tamaños de clusters, a priori, el cluster 3 es el que tiene menor cantidad de partners. 
-
+(ver gráficas de clusters Silhouette en archivo R) 
 
 Los 4 clústers arriba representados fueron impactados en la base de datos transformada para así identificar a cada partners dentro de cada cluster. Esto  permitió realizar una visualización grafica de los principales drivers identificados para cada clústers.
 
@@ -466,23 +438,12 @@ Dado este modelo, se detectaron de cada clúster que existen 4 tipos de partners
 
 
 
-
-
-
-
-
 Boxplots de Variables Numéricas filtradas por Cluster
 
- 
-
-
+(Ver gráficas Boxplots en Archivo de R)
 
 Estas gráficas boxplots permiten visualizar distribuciones de las observaciones filtradas por Cluster. 
 A grandes rasgos se puede visualizar que el Cluster 3 tiene mayores distribuciones (dispersiones de datos) en las siguientes variables: ordenes por mes, chats y cantidad de productos cargados. También se concluye que los valores de las medianas en el cluster 3 (es decir el 50% de las observaciones) son mayores en chats, ordenes, productos, y menores en tiempo de respuesta por orden en relación al resto de los clusters. A grandes rasgos, se puede concluir que el cluster 3 es donde se encuentran los partners que tienen mejores resultados operativos. 
-
-
-
-
 
 
 
@@ -492,18 +453,18 @@ A continuación mostramos un cuadro resumen de los meroides en las variables má
 
 Interpretación de meroides  - Centros de Clusters
 
-VARIABLES	Mini- markets	Tiendas Específicas	Grandes Superficies	Nuevos Socios
-ID - Meroide	1619	22142	2971	22166
-Cant. Partners	504	655	221	482
-Rechazos	0,36%	0,92%	0,13%	0,60%
-Triggers	0,60%	0,76%	0,04%	0,45%
-Capacity Check	FALSE	FALSE	TRUE	FALSE
-NPS	NEUTRAL	POSITIVO	POSITIVO	NEUTRAL
-Aceptan Pre-ordenes	TRUE	FALSE	TRUE	TRUE
-Sesiones	0,60%	0,38%	1,16%	1,90%
-Costo de envio	TRUE	TRUE	FALSE	FALSE
-Qty_products	64	34	5309	65
-Voucher_order	2,60%	1,92%	0,90%	4,20%
+VARIABLES	   Mini- markets	Tiendas Específicas	Grandes Superficies	Nuevos Socios
+ID - Meroide	     1619	                22142	                2971	           22166
+Cant. Partners	     504	                 655	                 221                482
+Rechazos	     0,36%              	0,92%	                0,13%              0,60%
+Triggers	     0,60%	                0,76%	                0,04%	           0,45%
+Capacity Check	     FALSE	                FALSE	                TRUE               FALSE
+NPS	             NEUTRAL             	POSITIVO	      POSITIVO	           NEUTRAL
+Aceptan Pre-ordenes  TRUE	                FALSE	                TRUE	            TRUE
+Sesiones	     0,60%	                0,38%	                1,16%	           1,90%
+Costo de envio	     TRUE	                TRUE	                FALSE	           FALSE
+Qty_products	      64	                 34	                5309	            65
+Voucher_order	     2,60%	                1,92%	                0,90%	           4,20%
 
 Debido a que kmedoids trabaja directamente con observaciones, se puede concluir que los centros de los clusters son representativos. Por lo tanto, se procedió a impactar los meroides en la base para determinar que partners eran los más representativos de cada cluster. 
 
@@ -522,27 +483,26 @@ El resto de los clusters parecen tener números similares en ordenes vendidas, c
 
 
 
-
-
-
-
 El siguiente cuadro comparativo combina medidas de medianas en variables cuantitativas y de frecuencias en variables cualitativas: 
 
-VARIABLES	Mini- markets	Tiendas Específicas	Grandes Superficies	Nuevos Socios
-Cant. Partners	504	655	221	482
-Aceptan Pre-ordenes	100%	0%	100%	80,90%
-Sesiones	0,80%	0,60%	1,30%	0,80%
-Costo de envio = TRUE	100%	90%	39%	0%
-Qty_products	110	75	4375	77
-Voucher_order	2,50%	2,2%%	1,4%%	4,17%
-Has_mov = TRUE	84,30%	66,00%	92,30%	77,00%
-Es Gold VIP	2,4%	0,3%	6,4%	1,7%
-Delivery PEYA	95,5%	88,2%	99,5%	97,9%
-Capacity_check = TRUE	9,30%	0,00%	100,00%	0,00%
-ORDENES	248,8	204,5	2316	263,257
-Antiguedad - Días	124	305	155	86
+VARIABLES	        Mini- markets	Tiendas Específicas	Grandes Superficies	Nuevos Socios
+Cant. Partners	             504	        655	                 221	            482
+Aceptan Pre-ordenes	     100%	         0%	                 100%	            80,90%
+Sesiones	             0,80%	        0,60%	                 1,30%	            0,80%
+Costo de envio = TRUE	     100%	         90%	                 39%	            0%
+Qty_products	             110	         75	                 4375	            77
+Voucher_order	             2,50%	         2,2%%	                 1,4%%              4,17%
+Has_mov = TRUE	             84,30%	         66,00%	                 92,30%	            77,00%
+Es Gold VIP	             2,4% 	         0,3%	                 6,4%	            1,7%
+Delivery PEYA	             95,5%	         88,2%	                 99,5%	            97,9%
+Capacity_check = TRUE	     9,30%	         0,00%	                 100,00%	    0,00%
+ORDENES	                     248,8	         204,5	                 2316	            263,257
+Antiguedad - Días	     124	         305	                 155	            86
 
 *se siguen obteniendo conclusiones a través de mediciones de medianas ya que las variables numéricas estan influenciadas por outliers.
+
+
+
 
 
 Características GENERALES de los clústers detectados
@@ -556,9 +516,6 @@ Cluster 1 - Minimarkets
 -	Manejan un buen nivel de ordenes por mes de casi 250
 -	Hacen su delivery a través de PedidosYa
 -	Representan al 20% de las ordenes de la vertical
-
-
-
 
 
 Cluster 2 - Tiendas Especificas
@@ -602,23 +559,28 @@ Cluster 4 - Nuevos socios
 
 
 
-
 *Hipótesis contrastadas con análisis descriptivo de clusters:
 “La gestión operativa en grandes superficies no debería traer aparejado altos ratios de rechazos por ordenes ni triggers”.
 Esta hipótesis se valida al análizar la variable rechazos en relación a la formación de los clusters, se observa que el cluster 3 de las grandes superficies, solo tiene un partner que pertenece a la etiqueta “Malos_op”(ratio de rechazos > 2,5%).  
  
-Como indica la gráfica de barras, el grupo de partners que pertenecen al cluster 3 (grandes superficies) es aquel que tiene un menor ratio de rechazos por orden.  
+Como indica la gráfica de barras (Ver gráfica en Archivo de R), el grupo de partners que pertenecen al cluster 3 (grandes superficies) es aquel que tiene un menor ratio de rechazos por orden.  
 Resumen de partners con rechazos > 2,5% : 110 partners
 Cluster 1 =  27 Partners que equivalen a un 5,3% del Cluster.
 Cluster 2 = 53 Partners que equivalen a un 8,09% del Cluster.
 Cluster 3 = 1 Partner que equivale al 0,45% del Cluster. 
 Cluster 4 = 29 Partners que equivalen a un 6% del Cluster. 
+
 “El costo de envio repercute en la cantidad de ordenes solicitadas, en consecuencia, partners considerados “nuevos” tienden a no tener costo de envio para procurar posicionarse velozmente en el mercado.”
 Esta hipótesis se valida al analizar el cluster llamado “nuevos socios” donde vemos que la mayoría de los partners pertenecientes a este grupo, son nuevos ingresos en la plataforma, con una antigüedad en un 50% de casos que asciende a 3 meses. También se observa que este grupo de asociados no tiene costo de envío en sus pedidos, por lo tanto se deduce que tienen la intencion de posicionarse en el mercado en el corto plazo. Asimismo, el alto ratio de vouchers por orden emitida es un indicador que contribuye a esta caracterización. 
 
+
+
 EVALUACIÓN Y CONCLUSIONES GENERALES
+
+
 En primer lugar, quedaron segmentados los partners por el tipo de negocio o su comienzo de operaciones con PedidosYa. 
 Tener en cuenta que en esta vertical no tiene un alto impacto el tiempo de demora del delivery, a diferencia de la vertical de restaurantes donde el consumidor requiere la inmediatez de su pedido y exige celeridad. En este caso, el producto que se brinda si demora más de lo estipulado a priori no tiene un alto impacto negativo como en la vertical anteriormente comentada.
+
 
 Recomendaciones :
 
@@ -639,7 +601,6 @@ El beneficio se dará tanto para este nuevo socio como también para la compañ�
 Para sus primeros meses en la aplicación, trabajar en campañas de marketing para subisidiar pedidos con voucher y asi generar una experiencia positiva con el partner.  
 
 
-
 Tienda Especializada
 
 Incentivar al partner a que presente un catálogo con mas fotos y productos cargados. 
@@ -650,7 +611,14 @@ Minimarkets
 -	Capacidad de funcionalidad en este tipo de tiendas es fundamental no solo para ofrecer un buen servicio sino para no generar errores a la hora de iniciar y aceptar la orden.
 o	Sugerencia: Brindarle información al partner de las ventajas de tener una funcionalidad de capacidad que le permita administrar su catálogo de forma más eficiente dando altas y bajas de producto cuando se requiera y asi evitar triggers. 
 o	Debido al bajo NPS: Hacer sentir al partner parte del proceso de crecimiento dentro de la aplicación. Generar entrevistas, encuestas de satisfacción, brindar material de apoyo y mantenerlo actualizado de las nuevas funcionalidades. Asumimos que estas técnicas estimularán un crecimiento en el porcentaje positivo de NPS en esta categoría de partner. 
+
+
+
+
+
 Partners “target” 
+
+
 Para un análisis más específico de los clusters, se decide hacer un filtro para localizar aquellos partners con niveles operativos deficientes de forma de poder intepretarlos, obtener conclusiones y realizar accionables para su recuperación a corto plazo. 
 Luego de segmentado este grupo, se le enviará el listado de partners “target” a los distintos departamentos de la empresa para que se realice el seguimiento específico para que ellos puedan desarrollarse y ser autosustentables. 
 Enfasis en ratios de rechazos: 
@@ -758,107 +726,35 @@ ANEXOS
 Diccionarios de variables: 
 
  
-variables	Descripción (datos desde Agosto 2020 a Enero 2021)	 
-restaurant_id	Identificador de cada partner	 
-business_name	Tipo de negocio: Restaurante, Market, Coffee, Shop, etc	 
+variables	        Descripción (datos desde Agosto 2020 a Enero 2021)	 
+restaurant_id	        Identificador de cada partner	 
+business_name	        Tipo de negocio: Restaurante, Market, Coffee, Shop, etc	 
 accepts_vouchers	Booleana: Local acepta voucher	 
-cant_pasivos	Cantidad de encuestas Pasivos en histórico.	Agregado
+cant_pasivos	        Cantidad de encuestas Pasivos en histórico.	Agregado
 cant_detractores	Cantidad de encuestas Detractores en histórico.	Agregado
-cant_promotores	Cantidad de encuestas Promotores en histórico.	Agregado
+cant_promotores	        Cantidad de encuestas Promotores en histórico.	Agregado
 actual_delivery_time	Tiempo promedio de delivery	Promedio
-vendor_late	Porcentaje de órdenes entregadas tarde por parte del partner (más de 10 minutos) al rider.	Promedio
-delivery_time	Rango de tiempo prometido de entrega.	Promedio
-shipping_amount	Booleana: Costo de envío.	 
-has_discount	Booleana: Acepta descuentos.	 
-has_mov	Booleana: Tiene valor mínimo de compra.	 
+vendor_late	        Porcentaje de órdenes entregadas tarde por parte del partner (más de 10 minutos) al rider.	Promedio
+delivery_time	        Rango de tiempo prometido de entrega.	Promedio
+shipping_amount	        Booleana: Costo de envío.	 
+has_discount	        Booleana: Acepta descuentos.	 
+has_mov	Booleana:       Tiene valor mínimo de compra.	 
 has_online_payment	Booleana: Acepta pago online.	 
-
-is_gold_vip	Boleana: Es un partner patrocinado.	 
+is_gold_vip	        Boleana: Es un partner patrocinado.	 
 has_custom_photo_menu	Booleana: Tiene fotos reales en menú.	 
-ordenes	Cantidad de órdenes totales en histórico.	Agregado
-response_time	Tiempo promedio de respuesta (tiempo que ocurre entre la realización del pedido y la confirmación o rechazo de la orden)	Promedio
+ordenes	                Cantidad de órdenes totales en histórico.	Agregado
+response_time	        Tiempo promedio de respuesta (tiempo que ocurre entre la realización del pedido y la confirmación o rechazo de la orden)	Promedio
 accepts_pre_order	Límite de órdenes que puede recibir un local en determinado tiempo)Booleana: El local acepta pre órdenes.	 
-capacity_check	Booleana: El local tiene la funcionalidad de capacidad (aplica para Groceries. Límite de órdenes que puede recibir un local en determinado tiempo)	 
+capacity_check	        Booleana: El local tiene la funcionalidad de capacidad (aplica para Groceries. Límite de órdenes que puede recibir un local en determinado tiempo)	 
 year_first_order	Año de primer orden	 
 month_first_order	Mes de primer orden	 
-qty_picts	Cantidad de fotos cargadas en histórico.	Agregado
-qty_products	Cantidad de productos cargados en histórico.	Agregado
-rechazos	Cantidad de órdenes canceladas o rechazadas.	Agregado
-triggers	Cantidad de triggers.	Agregado
+qty_picts	        Cantidad de fotos cargadas en histórico.	Agregado
+qty_products	        Cantidad de productos cargados en histórico.	Agregado
+rechazos	        Cantidad de órdenes canceladas o rechazadas.	Agregado
+triggers	        Cantidad de triggers.	Agregado
+voucher_order	        Cantidad de órdenes con voucher asociado.	Agregado
+is_logistic	        Booleana: El partner tiene delivery a cargo de PEYA.	
+cahts	                Cantidad chats asociados a alguna orden.	Agregado
+sesiones	        Cantidad de sesiones asociadas al partner,  generadas en el período por los usuarios al acceder al centro de ayuda	
 
-voucher_order	Cantidad de órdenes con voucher asociado.	Agregado
-is_logistic	Booleana: El partner tiene delivery a cargo de PEYA.	
-cahts	Cantidad chats asociados a alguna orden.	Agregado
-sesiones	Cantidad de sesiones asociadas al partner,  generadas en el período por los usuarios al acceder al centro de ayuda	Agregado
-
-6
-
-PedidosYa © 2020
-PROJECT TIMELINE
-
-  Presentación de caso: 11/02/2021                            2do punto de control: 11/04/2021
- 
-
-
-
-1er punto de control: 14/03/2021    3er punto de control: 09/05/2021   Entrega final:27/05/2021
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Boxplots de variables cuantitativas en la base:
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-NIVELES DE NPS POR CLUSTER
-
- 
-
-
-
-Costo de Envio en Clusters
-
- 
-
-
-
-
-
-
-
-
-Accepts pre orden en Clusters
 
