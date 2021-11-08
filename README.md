@@ -1,4 +1,3 @@
-# Customer Segmentation 
 
 	                                                                        
 
@@ -31,17 +30,24 @@ PedidosYa es una compañía uruguaya de delivery online con presencia en varios 
  Actualmente ha superado los 60 mil comercios adheridos a la plataforma y se encuentra en etapa de crecimiento al prever una participación operacional en 14 mercados para el 2021. 
 En estos momentos la empresa esta incursionando en nuevos mercados en el extranjero en donde tiene como politica comprar empresas (como en el caso de Glovo) que funcionan eficientemente, adquiriendo de esta forma la operación y logrando así el conocimiento (know how) de las particularidades de cada mercado.  
 A nivel de inversiones, mantiene una política de inversión constante en diversos frentes con el fin que el negocio crezca. 
- 
 
-Ventaja competitiva:
+![Peya1](https://user-images.githubusercontent.com/69318200/140774246-e97c700d-f91a-4aa3-ada1-f3db13b2386c.png)
+
+
+**Ventaja competitiva** :
+
 Una de las principales ventajas competitivas frente a sus competidores es ser pionera en el rubro al ser la primera plataforma de delivery online, lo cual transmite confianza, seguridad y presencia de marca tanto a nivel nacional como internacional.
 Especificamente en la vertical groceries, la cual se aborda en este proyecto, se ve una ventaja importante frente a sus competidores (por ejemplo: Disco, Tienda Inglesa, otros supermercados) al tener disponible información actualizada del comportamiento de compra de los usuarios, picos de consumo de productos, características del cliente, base de datos de los usuarios y el conocimiento de la demanda de productos definida por zona geográfica.
 Otra ventaja importante de la empresa que se puede aplicar en esta vertical es la red logística y el sustento tecnológico que respaldan las decisiones estratégicas de la empresa. 
 Ninguno de los competidores en esta vertical tiene el respaldo logístico y tecnológico de PedidosYa. 
+
+![Peya2](https://user-images.githubusercontent.com/69318200/140774354-109e2e50-e614-49f7-a583-741903cb1d07.png)
+
  
 
 ## INTRODUCCIÓN 
 Objetivo:
+
 Capitalizar la demanda de pedidos que se debe a la coyuntura actual por la emergencia sanitaria regional y responder con eficiencia operativa y comercial.  
 Consolidar el crecimiento en las verticales no “tradicionales” haciendo uso de las ventajas competitivas de la empresa: red de clientes, sistema logístico e información relacionada al comportamiento de compra del mercado. 
 La cartera de clientes de PedidosYa se compone en un 80% de partners en la categoría restaurantes los cuales requieren de un sistema logístico y operacional que tiene picos de exigencia al mediodía y durante la noche.  PedidosYa cuenta con dicha red logística. El paso siguiente, es impulsar las ventas de los nuevos verticales para que la empresa pueda aprovechar esta red, generar nuevas ocasiones de compra y realizar operaciones de forma estable durante el dia.  
@@ -54,23 +60,31 @@ El problema en esta vertical en particular es que hay partners de distinto volú
 Como los recursos de la empresa son finitos, se considera que particionando el problema y detectando posibles patrones en común entre los partners, se obtendrían directrices certeras que serían de gran utilidad para focalizar recursos y esfuerzos. En este sentido, es de relevancia que los partners puedan ser “autosuficientes” y ser los propios gestores de su negocio y performance dentro de la aplicación 
 A modo de ejemplo, las necesidades de un almacén, carnicería, o un autoservicio no son las mismas que las de un supermercado como Tienda Inglesa.
 
-Alcance:
+**Alcance**:
+
 El alcance es para toda la empresa en general.  Se trabajará con el departamento de operaciones y comercial.
 El equipo establecera recomendaciones para grupos especificos dentro de la cartera de partners. Los resultados parciales seran analizados junto a la directora de Analytics de la empresa, mientras que las prupuestas a nivel comercial y operacional seran presentadas a los responsables de los respectivos departamentos. 
 Es un estudio de mucha importancia para seguir potenciando el desarrollo de la vertical que más creció en el último periodo. 
 
 
 ## RIESGOS EN LA IMPLEMENTACIÓN DE LA ESTRATEGIA 
+
 ###### RIESGOS DE CAMBIO 
-El modelo no implica un cambio cultural dentro de la organización, dado que la empresa ya cuenta con su departamento de Analytics y tiene cultura de empresa Data Driven que apuesta por la recolección y revisión de datos y que toma decisiones estratégicas en base a la interpretación de datos.  
+
+El modelo no implica un cambio cultural dentro de la organización, dado que la empresa ya cuenta con su departamento de Analytics y tiene cultura de empresa Data Driven que apuesta por la recolección y revisión de datos y que toma decisiones estratégicas en base a la interpretación de datos. 
+
 ###### RIESGOS TECNOLÓGICOS 
+
 No se considera que puede haber un riesgo tecnológico asociado al desarrollo operacional de las soluciones del problema de negocio. PedidosYa tiene respaldo e invierte permanentemente en nuevas tecnologías. Se considera, que las respuestas a las hipótesis que se formulen deben ser acompañadas por el conocimiento interno de los empleados de la compañía. 
 
 
 ## HIPOTESIS 
+
 La expansión del negocio de forma exponencial en el área de markets no ha permitido realizar un análisis de como esta performando los partners y así el servicio de cara al cliente. 
 Se entiende que se cuenta con un input muy relevante e inmediato como es el NPS (Net Promoted Score) que ya está dando información sobre como performa cada partner, pero sin explicar que hacen que sean bien o mal valorados.
-Las hipótesis:
+
+**Las hipótesis**:
+
 -	Un NPS positivo o negativo de por si solo no va a explicar cómo performa un partner. Se puede ser un Partner con NPS positivo pero tener una operativa con altos rechazos, cantidad relevante de triggers y manejo ineficiente de su gestión operativa.
 -	Los tiempos de preparación y entrega de pedidos no tienen alto impacto en rechazos como puede ser en la vertical restaurants 
 -	La gestión operativa en grandes superficies no debería traer aparejado altos ratios de  rechazos por ordenes ni triggers.  
@@ -120,14 +134,18 @@ Esta comprobado que hay ciertas acciones comerciales que colaboran para que haya
 Sin embargo, estos partners pueden ser eficientes operativamente al tener bajos valores en variables como tiempo de respuesta, rechazos de órdenes. La misma situación puede suceder de forma invsersa, por lo tanto, resulta interesante lograr respuestas a estas preguntas mediante la investigación analítica de la base.
 En el avance del proyecto analítico se definirá la significación de negocio y la importancia de cada variable.  Así como también si se considera descartar variables en el transcurso del proyecto. 
 
+
 ###### Análisis Univariado, Imputación de valores faltantes y presencia de Outliers.
+
 El enfoque del análisis univariado de la base se enfrentó con técnicas de distribución de frecuencias y proporciones para variables cualitativas y de distribución de centralidad, dispersión y forma para variables cuantitativas. 
 Se empezará analizando aquellas variables que se asocian a un rendimiento operativo y luego se buscará su relación bivariada con las que se asocian a un rendimiento comercial. 
 Lo primero que se debe hacer es una separación entre aquellos partners de esta vertical que pertenezcan a la categoría de cliente “Own Delivery” de aquellos que pertenecen a “Vendor Delivery”. Luego de esta separación se podrá realizar un análisis descriptivo mas acertado de las variables ya que cada categoría de cliente cuenta con su particularidad.
 Como primera apreciación, se denota que el 94% de los partners requieren del servicio logístico de delivery de PedidosYa (“Own Delivery”).  Ante esto, se considera que una buena medida para clasificar como partners “buenos” en sus funciones operativas seran aquellos que tengan bajos valores de variables asociadas al tiempo de respuesta en la preparación, armado y entrega de pedidos. Lamentablemente, variables que se consideraban importantes en la definición de estos grupos como es el caso de Vendor_late, esta compuesta en su totalidad por valores faltantes, por lo tanto, fueron descartadas de la base en análisis.  Resta indagar sobre si esta falta de información se debe a un problema en la extracción y transformación de los datos o si se debe a otra dificultad operativa del sistema de gestión. 
 Siguiendo con el análisis univariado de las variables asociadas al rendimiento operativo, se ve que la cantidad de rechazos, triggers y chats asociados a órdenes presentan distribuciones asimétricas con asimetría positiva y presencia de outliers que luego afectarán la creación y segmentación de grupos. 
 Los principales resultados del análisis univariado indican que se debe hacer un tratamiento con los registros nulos de la base. Ante ello, se realizan reemplazos de valores nulos por ratios por orden emitida en variables como rechazos, mientras que en otras variables afectadas por outliers se opta por reemplazar por la mediana.  
-En cuanto a los valores perdidos o nulos, se realizó lo siguiente
+
+En cuanto a los valores perdidos o nulos, se realizó lo siguiente:
+
 -	Casos faltantes de variables cualitativas: se imputaron los valores más recurrentes de dicha variable
 -	N/A en variables cuantitativas: en mayoría de los casos se aplica la mediana, ya que la mayoría de las variables cuantitativas presentan problemas de outliers, y sus medias no son representativas. En otros, como en las encuestas, se decide imputarlos con valor cero.
 En las variables cualitativas se decide un tratamiento similar para todos los casos en que hayan valores faltantes. Siempre rige el principio de la mayoría, es decir, para todos los casos se imputa los valores faltantes a la etiqueta con mayor frecuencia. 
@@ -141,7 +159,9 @@ Esta práctica será útil a la hora de estandarizar la base, y así no sufrir e
 
 
 ## PREPARACIÓN DE DATOS
-Análisis multivariado:
+
+**Análisis multivariado**:
+
 A continuación se presenta un diagrama de correlación que muestra la relacion de las variables numéricas en la base recibida por la empresa sin hacer modificaciones de ningún tipo. 
 Sería la información de aquellos partners que no tienen valores faltantes en la base (aprox 25% de la base total) y sin hacer cálculos de ratios ni la transformación de las variables de encuestas. Este análisis permite visualizar una tendencia preliminar de correlaciones y a la vez, notar la notoria presencia de valores faltantes en la base.
 
@@ -188,43 +208,18 @@ Se llevó a cabo una segmentación en los siguientes niveles:
 - Partners buenos en sus resultados operativos : menos de 1% de ratio por orden. 
 En las siguientes tablas, se presentan datos comparativos de frecuencias en variables cualitativas y de valores de medianas en variables cuantitativas, para comparar resultados en dos grupos bien diferenciados de partners. “Rechazos Análisis” es una base de 110 partners que presentan ratios de rechazos por orden superiores a 2,5% mientras que “Rechazos Rest” sería el resto de la base con valores inferiores a dicho ratio.  Para que los resultados sean más representativos, se decidió acotar el análisis a aquellos partners que tengan más de 45 días de antigüedad en sus operaciones.
 
-Tabla comparativa en Variables Operativas – Enfoque Rechazos
+**Tabla comparativa en Variables Operativas – Enfoque Rechazos**
+
+![Captura de Pantalla 2021-11-08 a la(s) 12 25 44](https://user-images.githubusercontent.com/69318200/140770572-418cdfc6-e5fa-4514-9b8c-c65a900ed740.png)
+
 
 ###### ANALISIS RECHAZOS en Variables Operativas
          
-Grupo Rechazos Análisis   
-110 Partners	 
-% Triggers por orden	       3,96%	
-% Chats por orden	        0%	
-% NPS Positivo	               7,27%	
-% NPS Negativo	               3,63%	
-% Sesiones por orden	       1,01%	
-Accepts_pre_order=TRUE         82,70%	
-Response_time	               2,78	
-Delivery_time:Entre 15 y 30     19%	
-Actual_delivery_time	       15,13	
-capacity_check=TRUE	       0,90%	
-
-
-Grupo Rechazos Rest
-1512 Partners	
-% Triggers por orden		0,29%
-% Chats por orden	        0,12%
-% NPS Positivo		        3,90%
-% NPS Negativo		        3,90%
-% Sesiones por orden		0,70%
-Accepts_pre_order = TRUE	55,68%
-Response_time            	1,922
-Delivery_time : Entre 15 y 30	15,54%
-Actual_delivery_time		15
-capacity_check=TRUE             16,53%
-
-
-
 A nivel operativo, se puede concluir que la variable que tiene  más peso a la hora de los rechazos de ordenes son los triggers. Esta conclusión también se verifica en el diágrama de correlación en donde se puede visualizar correlación positiva entre las variables. 
 Asimismo, se deduce que aquellos partners con mayor cantidad de rechazos, también son aquellos que no tienen límite de capacidad establecida.  Esto puede explicar gran parte de los rechazos de ordenes que deben hacer, al no tener un sistema de gestión y de previsión ante una posible escasez de productos.  
 
-*Hipótesis contrastadas con análisis exploratorio:
+###### *Hipótesis contrastadas con análisis exploratorio:
+
 “Un NPS positivo o negativo de por si solo no va a explicar cómo performa un partner. Se puede ser un Partner con NPS positivo pero tener una operativa con altos rechazos, cantidad relevante de triggers y manejo ineficiente de su gestión operativa”
 En el análisis decriptivo del segmento “Rechazos Análisis” podemos ver que las encuestas de NPS no tienen un peso significativo a la hora de caracterizar eficiencias operativas de parnters. Los partners pertenecientes a este grupo tienen altos ratios de rechazos y pocas ordenes emitidas, no estan generando un valor diferencial a la empresa, sin embargo, sus niveles de NPS no difieren de los del resto de la base. 
 “Los tiempos de preparación y entrega de pedidos no tienen alto impacto en rechazos como puede ser en la vertical restaurants”
@@ -236,32 +231,14 @@ Como se observa en las tablas comparativas, el grupo de patnerns con alto ratio 
 
 
 
-Tabla comparativa en Variables Comerciales – Enfoque Rechazos 
+**Tabla comparativa en Variables Comerciales – Enfoque Rechazos** 
+
+
+![Captura de Pantalla 2021-11-08 a la(s) 12 26 07](https://user-images.githubusercontent.com/69318200/140771036-d9a8bc92-1420-45c4-923f-31390d8a5df1.png)
+
+
 
 ###### ANALISIS RECHAZOS en Variables Comerciales
-
-Rechazos Análisis
-110 Partners
-% Voucher por orden	         4%	
-accepts_voucher = TRUE	        82,70%	
-Has_Custom_Photo=TRUE 	         0%	
-is_gold_vip = TRUE	        0,90%	
-qty_products	                 48	
-has_online_payment = TRUE	3,63%	
-Shipping amount = TRUE  	 77%	
-has_mov = TRUE	               72,70%	
-
-
-Rechazos Rest
-1512 Partners
-% Voucher por orden	        2,50%
-accepts_voucher = TRUE	        91,13%
-Has_Custom_Photo=TRUE 	        3,04%
-is_gold_vip = TRUE	        2,24%
-qty_products		        117,5
-has_online_payment = TRUE	95,30%
-Shipping amount = TRUE	        68,58%
-has_mov = TRUE		        75,72%
 
 
 
@@ -269,22 +246,11 @@ A nivel comercial, se nota la gran barrera para el desarrollo que es la imposibi
 
 
 
-Tabla comparativa en Volúmen y antigüedad en días – Enfoque Rechazos 
+**Tabla comparativa en Volúmen y antigüedad en días – Enfoque Rechazos**
 
-		
-Rechazos Análisis	
-110 Partners
-Ordenes por mes	        12,73	
-Antiguedad en días	167,5	
-	
-	
-Rechazos Rest
-1512 Partners
-Ordenes por mes		342,42
-Antiguedad en días	192,5
-	
-	
-	
+![Captura de Pantalla 2021-11-08 a la(s) 12 26 20](https://user-images.githubusercontent.com/69318200/140771527-06d1c673-53fe-4300-a715-a3fa9ad486a2.png)
+
+				
 Aquí se concluye que los partners que tienen resultados operativas malos y que deben rechazar ordenes, tienden a tener una gran diferencia de ordenes emitidas frente a aquellos que operativamente son mejores.  Esto muestra que un alto ratio de rechazos en ordenes, atenta directamente contra el crecimiento y desarrollo de negocio del partner. 
 
 
@@ -307,7 +273,7 @@ Se tomo la base y se realizaron los siguientes procedimientos para evaluar qué 
 -	Se sacaron de la base aquellas variables que no agregan valor al análisis como también aquellas donde una de sus etiquetas tenga una frecuencia mayor al 90% (se detalla en anexo).
 -	Aquellas variables que estaban muy correlacionadas entre sí, no fueron consideradas en el grupo final para la segmentación, o fueron representadas por otras. 
 
-Selección de variables para clusterizar: 
+**Selección de variables para clusterizar**: 
 
 Las siguientes variables no fueron consideradas para la segmentación final por presentar frecuencias en una de sus etiquetas que ascendia a un 90%:
 -	Is_logistic
@@ -328,25 +294,9 @@ Variables que fueron descartadas por su distribución estadistica:
 
 
 
-Pre – Selección de variables para la segmentación (Estas son las variables elegidas para la segmentación)
+## Pre – Selección de variables para la segmentación (Estas son las variables elegidas para la segmentación)
 
-Variable	    Tipo	   Descripción
-Delivery_time	    Factor	   Rango de tiempo prometido de entrega
-Shipping_amount	    Factor	   Booleana - Si tiene costo de envío
-Has_mov	            Factor	   Booleana - Si tiene valor mínimo de compra
-Ordenes por mes	    Numérica       Cantidad de ordenes promedio por mes por partner.
-Response_time	    Numérica       Tiempo promedio de respuesta
-Accepts_pre_order   Factor	   Booleana - Si acepta Pre-ordenes
-Capacity_check	    Factor	   Funcionalidad de limite de capacidad.
-Qty_products	    Numérica       Cantidad de productos cargados en histórico por partner.
-% Rechazos	    Numérica       Porcentaje de rechazos por orden en el periodo de ventana de estudio.
-% Triggers	    Numérica       Porcentaje de triggers por orden en el periodo de ventana de estudio.
-% Voucher_order	    Numérica       Porcentaje de voucher por orden en el periodo de ventana de estudio.
-% Sesiones	    Numérica       Porcentaje de sesiones por orden en el periodo de ventana de estudio.
-% Chats	            Numérica       Porcentaje de chats por orden en el periodo de ventana de estudio.
-
-
-
+![Captura de Pantalla 2021-11-08 a la(s) 12 26 33](https://user-images.githubusercontent.com/69318200/140771733-40f52cb4-9a7b-44c1-a1e4-c2ba51a2aab4.png)
 
 
 Como se puede visualizar en la gráfica, se logró una preselección de variables mixtas que pueden determinar el tipo de algoritmo a usar. 
@@ -465,20 +415,10 @@ A grandes rasgos se puede visualizar que el Cluster 3 tiene mayores distribucion
 
 ###### A continuación mostramos un cuadro resumen de los meroides en las variables más importantes a nivel funcional de la base. 
 
-Interpretación de meroides  - Centros de Clusters
+**Interpretación de meroides  - Centros de Clusters**
 
-VARIABLES	   Mini- markets	Tiendas Específicas	Grandes Superficies	Nuevos Socios
-ID - Meroide	     1619	                22142	                2971	           22166
-Cant. Partners	     504	                 655	                 221                482
-Rechazos	     0,36%              	0,92%	                0,13%              0,60%
-Triggers	     0,60%	                0,76%	                0,04%	           0,45%
-Capacity Check	     FALSE	                FALSE	                TRUE               FALSE
-NPS	             NEUTRAL             	POSITIVO	      POSITIVO	           NEUTRAL
-Aceptan Pre-ordenes  TRUE	                FALSE	                TRUE	            TRUE
-Sesiones	     0,60%	                0,38%	                1,16%	           1,90%
-Costo de envio	     TRUE	                TRUE	                FALSE	           FALSE
-Qty_products	      64	                 34	                5309	            65
-Voucher_order	     2,60%	                1,92%	                0,90%	           4,20%
+![Captura de Pantalla 2021-11-08 a la(s) 12 26 51](https://user-images.githubusercontent.com/69318200/140772064-bd1c3de2-0f95-444d-b4e5-3dd1e1cb43e7.png)
+
 
 Debido a que kmedoids trabaja directamente con observaciones, se puede concluir que los centros de los clusters son representativos. Por lo tanto, se procedió a impactar los meroides en la base para determinar que partners eran los más representativos de cada cluster. 
 
@@ -488,8 +428,11 @@ Vemos que las principales diferencias se dan en las variables capacity_check, vo
 Asi vemos la distribución en  términos de ordenes por mes sobre el total de ordenes de la base: 
 
 Cluster 1:  20,9% 
+
 Cluster 2:  13,81%
+
 Cluster 3:  50,19%
+
 Cluster 4:  15,02%
 
 Claramente el cluster 3 es el de las grandes superficies y que más volumen operacional tiene. 
@@ -499,19 +442,9 @@ El resto de los clusters parecen tener números similares en ordenes vendidas, c
 
 El siguiente cuadro comparativo combina medidas de medianas en variables cuantitativas y de frecuencias en variables cualitativas: 
 
-VARIABLES	        Mini- markets	Tiendas Específicas	Grandes Superficies	Nuevos Socios
-Cant. Partners	             504	        655	                 221	            482
-Aceptan Pre-ordenes	     100%	         0%	                 100%	            80,90%
-Sesiones	             0,80%	        0,60%	                 1,30%	            0,80%
-Costo de envio = TRUE	     100%	         90%	                 39%	            0%
-Qty_products	             110	         75	                 4375	            77
-Voucher_order	             2,50%	         2,2%%	                 1,4%%              4,17%
-Has_mov = TRUE	             84,30%	         66,00%	                 92,30%	            77,00%
-Es Gold VIP	             2,4% 	         0,3%	                 6,4%	            1,7%
-Delivery PEYA	             95,5%	         88,2%	                 99,5%	            97,9%
-Capacity_check = TRUE	     9,30%	         0,00%	                 100,00%	    0,00%
-ORDENES	                     248,8	         204,5	                 2316	            263,257
-Antiguedad - Días	     124	         305	                 155	            86
+![Captura de Pantalla 2021-11-08 a la(s) 12 27 03](https://user-images.githubusercontent.com/69318200/140772288-0be8af74-086b-490a-8eb6-75b2cc522046.png)
+
+
 
 *se siguen obteniendo conclusiones a través de mediciones de medianas ya que las variables numéricas estan influenciadas por outliers.
 
@@ -544,6 +477,7 @@ Antiguedad - Días	     124	         305	                 155	            86
 
 
 ###### Cluster 3 - Grandes Superficies
+
 -	Bajo nivel de triggers por orden de incumplimiento
 -	NPS Positivo más alto 
 -	Todos aceptan pre ordenes como también manejan funcionalidad de capacidad
@@ -556,6 +490,7 @@ Antiguedad - Días	     124	         305	                 155	            86
 
 
 ###### Cluster 4 - Nuevos socios
+
 -	Alto ratio de rechazo vs el resto de los comercios
 -	Presentan ratios más alto de triggers por orden de incumplimiento en comparación con otros grupos, ya que están comenzando a operar recientemente en la plataforma y son inexperientes. 
 -	Un NPS positivo que apenas alcanza el 40%
@@ -573,6 +508,7 @@ Antiguedad - Días	     124	         305	                 155	            86
 
 
 ###### *Hipótesis contrastadas con análisis descriptivo de clusters:
+
 “La gestión operativa en grandes superficies no debería traer aparejado altos ratios de rechazos por ordenes ni triggers”.
 Esta hipótesis se valida al análizar la variable rechazos en relación a la formación de los clusters, se observa que el cluster 3 de las grandes superficies, solo tiene un partner que pertenece a la etiqueta “Malos_op”(ratio de rechazos > 2,5%).  
  
@@ -580,10 +516,15 @@ Esta hipótesis se valida al análizar la variable rechazos en relación a la fo
  
  
 Como indica la gráfica de barras, el grupo de partners que pertenecen al cluster 3 (grandes superficies) es aquel que tiene un menor ratio de rechazos por orden.  
+
 Resumen de partners con rechazos > 2,5% : 110 partners
+
 Cluster 1 =  27 Partners que equivalen a un 5,3% del Cluster.
+
 Cluster 2 = 53 Partners que equivalen a un 8,09% del Cluster.
+
 Cluster 3 = 1 Partner que equivale al 0,45% del Cluster. 
+
 Cluster 4 = 29 Partners que equivalen a un 6% del Cluster. 
 
 “El costo de envio repercute en la cantidad de ordenes solicitadas, en consecuencia, partners considerados “nuevos” tienden a no tener costo de envio para procurar posicionarse velozmente en el mercado.”
@@ -637,7 +578,9 @@ o	Debido al bajo NPS: Hacer sentir al partner parte del proceso de crecimiento d
 
 Para un análisis más específico de los clusters, se decide hacer un filtro para localizar aquellos partners con niveles operativos deficientes de forma de poder intepretarlos, obtener conclusiones y realizar accionables para su recuperación a corto plazo. 
 Luego de segmentado este grupo, se le enviará el listado de partners “target” a los distintos departamentos de la empresa para que se realice el seguimiento específico para que ellos puedan desarrollarse y ser autosustentables. 
+
 Enfasis en ratios de rechazos: 
+
 Al hacer enfásis en el grupo de partners que presentan altos ratios de rechazos, se intentará descifrar si existen relaciones ocultas en los datos que contribuyan a un mal performance. 
 Para segmentar el grupo a estudio se filtrará por las siguientes características: 
 -	40 > Antigüedad en días < 150 : Con este filtro se procura centrarse en aquellos que ya tengan su negocio en marcha, con al menos un mes y medio de gestión operativa y que hayan ingresado en epoca de pandemia. 
@@ -650,24 +593,12 @@ Resultados -- Se obtuvo una nueva base de análisis de 122 partners que se compo
 -	52 partners del Cluster 4 (Nuevos Socios)
 Re-activar este conjunto de partners deberia sería el público objetivo de Peya a corto plazo con el cometido final de que estos partners sean autosustentables. 
 La idea de esta nueva segmentación es encontrar drivers que expliquen o se asocien a altos ratios de rechazos. 
-Tabla comparativa de frecuencias y medianas en Cluster 1
-		53 Partners	 111 Partners
-ANALISIS RECHAZOS - Cluster 1	Mini - Markets
-	Rechazos > 1 %	Rechazos < 1%
-Variables 	% Triggers por orden	1,37%	0,21%
-	% Rechazos 	1,91%	0,17%
-	% Chats por orden	0%	0%
-	% NPS Negativo	0,00%	3,60%
-	% Sesiones por orden	1,21%	1,25%
-	Response_time	2,34	1,89
-	Qty Products	68	49
-	Has_Mov 	86,00%	84,50%
-	Dias de antiguedad	86	95
-	Costo de Envio	100%	100%
-	ordenes por mes	38	96
-	Accept_pre_order	100%	100%
-	Voucher_order	4%	3,06%
-	capacity_check=TRUE	0,00%	12,50%
+
+###### Tabla comparativa de frecuencias y medianas en Cluster 1
+
+![Captura de Pantalla 2021-11-08 a la(s) 12 27 22](https://user-images.githubusercontent.com/69318200/140772635-f44c3c42-7506-4f93-9704-124f5e810105.png)
+
+
 Dato: 15,4% de los partners de este cluster presentan ratios de rechazo > 1% por orden. 	
 Se comparan medianas y valores más frecuentes de partners que pertenezcan al mismo cluster, con las mismas caracteristicas de ordenes (tope 300 por mes) y en la misma ventana de tiempo, para descifrar si se pueden realizar asociaciones.
 Se puede observa que la gran diferencia en los grupos son la cantidad de ordenes por mes.
@@ -675,47 +606,42 @@ Se puede concluir que altos ratios de rechazos estan relacionados con partners c
 Los triggers de incumplimiento presentan alta correlación con los ratios de rechazos, por lo tanto es una de las situaciones que más se deben atacar. Tambien resta indagar sobre las causas de los triggers para poder enfrentar el problema con mayores herramientas. 
 El NPS y los chats no parecen ser factores relevantes para que un partner tenga alto ratios de rechazo en sus ordenes en este cluster. 
 Un aspecto a destacar es la funcionalidad de capacidad que ciertos partners de este cluster tienen en su sistema de gestión. Mediante el análisis de valores de medianas se puede comprobar que los partners que tienen gestión en su limite de capacidad, tienden a tener menores ratios de rechazo. Por lo tanto, una buena acción operativa sería que los partners de esta vertical accedan a la funcionalidad de capacidad. 
+
 Con respecto a las observaciones pertenecientes al Cluster 2 y 3, se entiende que al ser muy pocas observaciones, es dificil encontrar conclusiones determinantes al momento de comparar grupos malos vs buenos operativamente.  
+
 Con respecto a los partners del Cluster 3 que presentan alto ratio de rechazo, se decide dado que son 5 partners, realizar un seguimiento semanal de los indicadores operativos y resultados.
 Dato: 5,8% de los partners del cluster 3 presentan ratios de rechazo superiores a 1%. 
-Tabla comparativa de frecuencias y medianas en Cluster 4
-		52 Partners	75  Partners
-ANALISIS RECHAZOS - Cluster 4	Nuevos Socios
-	Rechazos > 1 %	Rechazos < 1%
-Variables 	% Triggers por orden	1,56%	0,4%
-	% Rechazos 	2,19%	0,32%
-	% Chats por orden	0,00%	0%
-	% NPS Negativo	5,80%	2,70%
-	% Sesiones por orden	0,73%	0,81%
-	Response_time	2,9	2,16
-	Qty Products	56	43
-	Has_Mov 	69%	73%
-	Dias de antiguedad	74	85
-	Costo de Envio	0%	0%
-	Pago Online 	100%	98,7
-	ordenes por mes	31	106
-	Accept_pre_order	94,20%	90%
-	Voucher_order	6,35%	4,6%
-	capacity_check=TRUE	0,00%	1,30%
+
+###### Tabla comparativa de frecuencias y medianas en Cluster 4
+
+![Captura de Pantalla 2021-11-08 a la(s) 12 27 33](https://user-images.githubusercontent.com/69318200/140772837-18c0f9f5-dfde-4d3a-ac7c-b1f54b60a315.png)
+
+
 Dato: 22,4% de los partners de este grupo presentan ratios de rechazo > 1% por orden. 
 En este grupo de partners se presentan grandes diferencias en las ordenes de venta. Por lo tanto acciones efectivas que mitigen rechazos, serán importantes para emitir más ordenes. 
 El obejtivo de nuestros accionables son generar herramientas de autogestión para que el partner pueda desarrollarse por si solo. Los equipos de onboarding brindarán herramientas de información y soporte cuando lo fuese necesario, pero es el partner quién debe valerse por si mismo.
 PedidosYa brindara las herramientas necesarias para que el partner tenga oportunidad de mejora. Y cuanto más independiente y autosustentable sea el partner, menores serán los recursos empleados por la empresa.
 Accionables para Partner Target: 
 Elaborar un panel de control de reporting que haga seguimiento de ratios para esta cartera de partners y que incluya: 
+
 Metas // Rendimiento operativo : 
+
 -	Porcentaje de pedidos rechazados por el local en la última semana, con la meta de bajar del 1% por orden.
 -	Porcentaje de pedidos rechazados por el consumidor final en la última semana con la meta de bajar del 1% por orden. 
 -	Tiempo de respuesta : Bajar tiempos de respuesta. Implementar un ranking de velocidad de respuesta.
 -	Información en promedios y gráficas comparativas de rendimiento operativo semanal en terminos de pedidos, facturación, ticket promedio
 -	Información resumida sobre las causas de los rechazos en ordenes. Así de esta forma el partner puede anticiparse a futuros problemas en pedidos rechazados. 
 -	Información resumida acerca de los motivos sobre los cuales ha solicitado ayuda en linea, para que de esta forma, el partner pueda aprender sobre sus propios errores 
+
 Metas // Rendimiento comercial:
+
 -	Productos más solicitados durante el mes, con información de tiempo y hora en que fueron solicitados. 
 -	Perfiles de usuarios compradores para caracterizar el cliente final. 
 -	NPS: mejorar encuestas / valoración / puntuación y ofrecer información de cómo lograr altos niveles de NPS.
 -	Establecer metas comerciales de incorporar nuevas fotos de productos de forma semanal y ofrecer información al respecto de cómo hacerlo. Meta : 8-10 fotos por semana. 
+
 De Información // Centros de ayuda:
+
 -	Información acerca de los beneficios del pago online, como funciona y como se pone en marcha. Ventajas frente a competidores que no lo tienen. 
 -	Información sobre las ventajas de tener buenos indicadores operativos.
 -	Información sobre la editación, incorporación y modificación de productos en linea en el catálogo, para así poder manejar su herramienta de gestión con mayor celeridad, y no presentar problemas de límite de capacidad.
